@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    restart: unless-stopped
